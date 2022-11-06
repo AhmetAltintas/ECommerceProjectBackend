@@ -30,6 +30,12 @@ class Program
     
     
     
+    
+    
+    
+    
+    
+    
     private static void CategoryTest()
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
@@ -39,6 +45,9 @@ class Program
         }
     }
 
+    
+    
+    
     private static void ProductTest()
     {
         ProductManager productManager = new ProductManager(new EfProductDal());
