@@ -78,6 +78,10 @@ app.UseCors(MyAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 
+var env = app.Services.GetRequiredService<IWebHostEnvironment>();
+
+app.UseStaticFiles();
+
 app.UseAuthentication();
 
 app.UseAuthorization();

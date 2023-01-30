@@ -2,8 +2,6 @@
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 
-//SOLİD
-//Open Closed Program
 
 class Program
 {
