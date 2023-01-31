@@ -14,6 +14,3 @@ namespace DataAccess.Abstract
         List<ProductDetailDTO> GetProductDetails();
     }
 }
-
-
-// Code refactoring
