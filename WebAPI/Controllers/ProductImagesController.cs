@@ -61,7 +61,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getbyproductıd")]
+        [HttpGet("getbyproductid")]
         public IActionResult GetByProductId(int productId)
         {
             var result = _productImageService.GetProductImagesByProductId(productId);

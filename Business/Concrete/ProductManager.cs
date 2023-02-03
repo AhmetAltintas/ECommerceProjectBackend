@@ -79,10 +79,6 @@ namespace Business.Concrete
         
         public IDataResult<List<ProductDetailDTO>> GetProductDetails()
         {
-            if (DateTime.Now.Hour == 22)
-            {
-                return new ErrorDataResult<List<ProductDetailDTO>>(Messages.MaintenanceTime);
-            }
             return new SuccessDataResult<List<ProductDetailDTO>>(_productDal.GetProductDetails());
         }
 
@@ -91,6 +87,11 @@ namespace Business.Concrete
         {
             _productDal.Update(product);
             return new SuccessResult(Messages.ProductUpdated);
+        }
+
+        public IDataResult<List<ProductDetailDTO>> GetDetailsByCategoryId(int categoryId)
+        {
+            return new SuccessDataResult<List<ProductDetailDTO>>(_productDal.GetProductDetailsByCategoryId(categoryId));
         }
 
         //[TransactionScopeAspect]
@@ -128,8 +129,5 @@ namespace Business.Concrete
             }
             return new SuccessResult();
         }
-
-        
-        
     }
 }
