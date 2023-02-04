@@ -31,5 +31,14 @@ namespace Business.Constants
         public static string ProductImageDeleted = "Ürün görseli silindi.";
         public static string ProductImageUpdated = "Ürün görseli güncellendi.";
         public static string CarImageLimitExceeded = "Ürün görsel limiti dolu.(5)";
+        public static string UserAdded = "Kullanıcı eklendi.";
+        public static string UserUpdated = "Kullanıcı bilgileri güncellendi.";
+        public static string UserDeleted = "Kullanıcı silindi.";
+        public static string FirstAndLastNameUpdated = "Ad soyad bilgileri güncellendi";
+        public static string EmailUpdated = "E-posta bilgisi güncellendi";
+        public static string EmailIsAlreadyRegistered = "E-posta adresi zaten kayıtlı.";
+        public static string PasswordIsIncorrect = "Parola hatalı.";
+        public static string PasswordUpdated = "Parola güncellendi.";
+        public static string PasswordsDoNotMatch = "Parolalar aynı değil.";
     }
 }
