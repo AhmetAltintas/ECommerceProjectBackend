@@ -31,7 +31,7 @@ namespace Business.Concrete
         }
 
         [CacheRemoveAspect("IProductService.Get")]
-        [SecuredOperation("product.add,admin")]
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
@@ -82,6 +82,8 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDTO>>(_productDal.GetProductDetails());
         }
 
+        [CacheRemoveAspect("IProductService.Get")]
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Update(Product product)
         {
@@ -92,6 +94,15 @@ namespace Business.Concrete
         public IDataResult<List<ProductDetailDTO>> GetDetailsByCategoryId(int categoryId)
         {
             return new SuccessDataResult<List<ProductDetailDTO>>(_productDal.GetProductDetailsByCategoryId(categoryId));
+        }
+
+        [CacheRemoveAspect("IProductService.Get")]
+        [SecuredOperation("admin")]
+        [ValidationAspect(typeof(ProductValidator))]
+        public IResult Delete(Product product)
+        {
+            _productDal.Delete(product);
+            return new SuccessResult(Messages.ProductDeleted);
         }
 
         //[TransactionScopeAspect]
@@ -129,5 +140,7 @@ namespace Business.Concrete
             }
             return new SuccessResult();
         }
+
+        
     }
 }
