@@ -40,5 +40,6 @@ namespace Business.Constants
         public static string PasswordIsIncorrect = "Parola hatalı.";
         public static string PasswordUpdated = "Parola güncellendi.";
         public static string PasswordsDoNotMatch = "Parolalar aynı değil.";
+        public static string ProductDeleted = "Ürün silindi.";
     }
 }
